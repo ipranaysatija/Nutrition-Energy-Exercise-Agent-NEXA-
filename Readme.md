@@ -43,23 +43,24 @@ This project is designed with **industry-grade architecture**, making it suitabl
 
 
 User
-│
-▼
+ |
+ v
 Frontend (Streamlit / UI)
-│
-▼
+ |
+ v
 FastAPI Backend
-│
-├── Agent Router (LangGraph)
-│ ├── Calorie Tracking Agent
-│ ├── Nutrition Analysis Agent
-│ ├── Fitness Recommendation Agent
-│ ├── Validation / Safety Agent
-│ └── Memory Agent
-│
-├── Tools (APIs, Calculators, DB)
-├── Vector Database (FAISS / Chroma)
-└── User Data Store
+ |
+ +-- Agent Router (LangGraph)
+ |   +-- Calorie Tracking Agent
+ |   +-- Nutrition Analysis Agent
+ |   +-- Fitness Recommendation Agent
+ |   +-- Validation / Safety Agent
+ |   +-- Memory Agent
+ |
+ +-- Tools (APIs, Calculators, DB)
+ +-- Vector Database (FAISS / Chroma)
+ +-- User Data Store
+
 
 
 ---
