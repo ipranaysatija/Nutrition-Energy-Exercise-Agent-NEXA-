@@ -42,24 +42,21 @@ This project is designed with **industry-grade architecture**, making it suitabl
 ## 🏗️ Architecture Overview
 
 
-User
- |
- v
-Frontend (Streamlit / UI)
- |
- v
-FastAPI Backend
- |
- +-- Agent Router (LangGraph)
- |   +-- Calorie Tracking Agent
- |   +-- Nutrition Analysis Agent
- |   +-- Fitness Recommendation Agent
- |   +-- Validation / Safety Agent
- |   +-- Memory Agent
- |
- +-- Tools (APIs, Calculators, DB)
- +-- Vector Database (FAISS / Chroma)
- +-- User Data Store
+flowchart TD
+    U[User] --> F[Frontend<br/>(Streamlit / UI)]
+    F --> B[FastAPI Backend]
+
+    B --> R[Agent Router<br/>(LangGraph)]
+    R --> C[Calorie Tracking Agent]
+    R --> N[Nutrition Analysis Agent]
+    R --> FR[Fitness Recommendation Agent]
+    R --> V[Validation / Safety Agent]
+    R --> M[Memory Agent]
+
+    B --> T[Tools<br/>(APIs, Calculators, DB)]
+    B --> VDB[Vector Database<br/>(FAISS / Chroma)]
+    B --> UDS[User Data Store]
+
 
 
 
