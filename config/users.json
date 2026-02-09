@@ -1,0 +1,21 @@
+{
+    "user_raj_demo": {
+        "full_name": "Raj",
+        "age": 18,
+        "height_cm": 175.5,
+        "weight_kg": 75.5,
+        "gender": "Male",
+        "goals": "build muscle, reduce belly fat",
+        "coach_id": "demo_coach_xyz",
+        "created_at": "2026-01-25T02:41:21.983499"
+    },
+    "user_kritika_demo": {
+        "full_name": "Kritika",
+        "age": 29,
+        "height_cm": 159.5,
+        "weight_kg": 68.5,
+        "gender": "Female",
+        "goals": "gain weight, improve stamina",
+        "coach_id": "demo_coach_xyz",
+        "created_at": "2026-01-25T03:00:50.578348"
+    }
