@@ -40,13 +40,8 @@ This project is designed with **industry-grade architecture**, making it suitabl
 ---
 
 ## 🏗️ Architecture Overview
-
-
-## 🏗️ Architecture Overview
-
 - **User**
   - **Frontend (Streamlit / UI)**
-    - **FastAPI Backend**
       - **Agent Router (LangGraph)**
         - Calorie Tracking Agent
         - Nutrition Analysis Agent
@@ -54,12 +49,13 @@ This project is designed with **industry-grade architecture**, making it suitabl
         - Validation / Safety Agent
         - Memory Agent
       - **Tools**
-        - External APIs
         - Calorie & Nutrition Calculators
         - Database Utilities
       - **Vector Database**
         - FAISS / Chroma
       - **User Data Store**
+        - AgentKB
+        - user_dataKB
 
 
 
