@@ -35,6 +35,6 @@ def nexa_ai(model="command-a-03-2025", temp=0,max=50):
 #     return completion.choices[0].message.content
 def embedding_model():
     embeddings = CohereEmbeddings(
-    cohere_api_key=fetch_api(), model="embed-v4.0"
+    cohere_api_key=st.secrets["COHERE_KEY"], model="embed-v4.0"
 )
     return embeddings
