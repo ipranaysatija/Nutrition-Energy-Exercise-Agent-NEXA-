@@ -1,9 +1,10 @@
-from .LLM_Gateway import fetch_api, nexa_ai
+from .LLM_Gateway import nexa_ai
 from .database_utils import text_to_db
 from langchain_community.retrievers import ArxivRetriever
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain.tools import tool
 from tavily import TavilyClient
+import streamlit as st
 llm = nexa_ai()
 
 def extract_keywords(query:str):
@@ -36,7 +37,7 @@ def get_papers(query: str):
 def web_search(query: str):
     """If the user query needs web search results, use this tool to fetch relevant results from the web."""
     keywords=extract_keywords(query)
-    key=fetch_api(key="tavily_key")
+    key=st.secrets["TAVILY"]
     client = TavilyClient(api_key=key)
     res = client.search(keywords, max_results=1)
     text_to_db(res["results"][0]['content'])
